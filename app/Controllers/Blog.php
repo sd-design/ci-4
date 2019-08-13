@@ -1,6 +1,7 @@
 <?php 
 namespace App\Controllers;
 use App\Models\Funs;
+use App\Models\Orders;
 use CodeIgniter\Controller;
 
 
@@ -31,6 +32,19 @@ return $this->response->setJSON($output);
 $hello = new Funs;
 //echo $hello->sayHello() ;
 $output = array('answer' => $hello->sayHello());
+return $this->response->setJSON($output);
+
+	}
+
+	public function list_orders()
+	{
+		/*
+$db = \Config\Database::connect();
+ $query = $db->query('SELECT ID, name, phone, order_email FROM sd_order');
+$output = $query->getResult();
+*/
+$orders = new Orders();
+$output = $orders->get_list_orders();
 return $this->response->setJSON($output);
 
 	}
