@@ -6,24 +6,32 @@ use CodeIgniter\Controller;
 
 class Blog extends Controller
 {
+
 	public function index()
 	{
 		return view('welcome_message');
 	}
 
+	public function Fun(){
+		$fun = new Funs;
+		return $fun;
+	}
+
 	public function hello()
 	{
-$output = array('answer' => 'hello');
+		$say = "hello new CI4";
+		
+$output = array('answer' => $this->Fun()->say($say));
 
 return $this->response->setJSON($output);
 
 	}
 	public function hello2()
 	{
-$hello = new sayHello();
-var_dump($hello) ;
-//$output = array('answer' => );
-//return $this->response->setJSON($output);
+$hello = new Funs;
+//echo $hello->sayHello() ;
+$output = array('answer' => $hello->sayHello());
+return $this->response->setJSON($output);
 
 	}
 

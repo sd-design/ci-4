@@ -10,23 +10,22 @@ CodeIgniter - это небольшой по размеру PHP-фреймвор
 
 **This is pre-release code and should not be used in production sites.**
 
-More information about the plans for version 4 can be found in [the announcement](http://forum.codeigniter.com/thread-62615.html) on the forums.
+Больше информации о версии Codeigniter 4 можно найти найти  [в анонсах](http://forum.codeigniter.com/thread-62615.html) на форуме проекта.
 
-The user guide corresponding to this version of the framework can be found
-[here](https://codeigniter4.github.io/userguide/). 
+Руководство пользователя
+[здесь](https://codeigniter4.github.io/userguide/). 
 
 
 ## Важные изменения, связанные с index.php
 
-`index.php` больше не находится в корневой директории! Он перенесён в директорию *public*. Это улучшение безопасности и разделения компонентов.
+`index.php` больше не находится в корневой директории! Он перенесён в директорию *public*. Это улучшение безопасности и разделение компонентов фреймворка.
 
 This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the framework are exposed.
 
 **Внимание!** прочитайте внимательно user_guide, чтобы знать как работает CI4!
 
-## Repository Management
+## Управление репозиторием
 
 We use Github issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
 We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
@@ -48,7 +47,7 @@ Please read the [*Contributing to CodeIgniter*](https://github.com/codeigniter4/
 - [intl](http://php.net/manual/en/intl.requirements.php)
 - [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
 
-Additionally, make sure that the following extensions are enabled in your PHP:
+Кроме того, убедитесь, что в вашем PHP включены следующие расширения:
 
 - json (enabled by default - don't turn it off)
 - [mbstring](http://php.net/manual/en/mbstring.installation.php)

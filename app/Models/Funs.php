@@ -9,4 +9,8 @@ use CodeIgniter\Model;
 	return $answer;
 }
 
+ public function say($say){
+	return $say;
+}
+
     }
