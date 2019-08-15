@@ -5,14 +5,20 @@ use CodeIgniter\Model;
     class Orders extends Model
     {
   public function get_list_orders(){
-  	$db      = \Config\Database::connect();
-$builder = $db->table('sd_order');
-$builder->orderBy('ID', 'DESC');
- $query   = $builder->get(); 
+			$db  = \Config\Database::connect();
+			$builder = $db->table('sd_order');
+			$builder->orderBy('ID', 'DESC');
+			$query   = $builder->get(); 
   	return  $query->getResult();
   	
 }
- 	
 
+  public function get_list_orders_html(){
+			$db  = \Config\Database::connect();
+			$builder = $db->table('sd_order');
+			$builder->orderBy('ID', 'DESC');
+			$query   = $builder->get(); 
+  	return  $query;
+}
             
     }

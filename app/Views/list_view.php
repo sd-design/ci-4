@@ -12,7 +12,7 @@
 				height: 200px;
 				width: 155px;
 				display: inline-block;
-				opacity: 0.15;
+				opacity: 0.42;
 				position: absolute;
 				z-index: 0;
 				top: 2rem;
@@ -103,18 +103,22 @@
 				</svg>
 			</div>
 
-			<h1>Welcome to CodeIgniter</h1>
+			<h1><?=$hello?> CodeIgniter</h1>
 
 			<p class="version">version <?= CodeIgniter\CodeIgniter::CI_VERSION ?></p>
 
 			<div class="guide">
 				<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
+				<p>Использовать нужно только длинные теги:</p>
+				<code>
+					<?php echo esc('<?php - !!!!not <?');?> 
+				</code>
 
 				<p>If you would like to edit this page you'll find it located at:</p>
 
 				<pre>
 				<code>
-					app/Views/welcome_message.php
+					app/Views/list_view.php
 				</code>
 				</pre>
 
@@ -122,7 +126,7 @@
 
 				<pre>
 				<code>
-					app/Controllers/Home.php
+					app/Controllers/Blog.php
 				</code>
 				</pre>
 
@@ -134,6 +138,12 @@
 
 			<div class="footer">
 				Page rendered in {elapsed_time} seconds. Environment: <?= ENVIRONMENT ?>
+				<br>
+		<small><?= FCPATH?></small>
+				<?php foreach ($list_orders as $item): ?> 
+				<p>
+<small>name: <?php echo $item['name']; ?>	</small></p>
+<?php endforeach;?> 
 			</div>
 
 		</div>

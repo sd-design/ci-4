@@ -11,6 +11,7 @@
 // NOTE: changing this will require manually modifying the
 // existing namespaces of App\* namespaced-classes.
 //
+
 define('APP_NAMESPACE', 'App');
 
 /*

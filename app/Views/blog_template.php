@@ -103,9 +103,9 @@
 				</svg>
 			</div>
 
-			<h1>Welcome to CodeIgniter</h1>
+			<h1>{hello} CodeIgniter</h1>
 
-			<p class="version">version <?= CodeIgniter\CodeIgniter::CI_VERSION ?></p>
+			<p class="version">version 4.0</p>
 
 			<div class="guide">
 				<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
@@ -133,7 +133,10 @@
 			</div>
 
 			<div class="footer">
-				Page rendered in {elapsed_time} seconds. Environment: <?= ENVIRONMENT ?>
+			Page rendered in {elapsed_time} seconds.
+				{list_orders}     
+                <p><strong>name:  {name}</strong> phone: {phone}</p>
+        {/list_orders}
 			</div>
 
 		</div>

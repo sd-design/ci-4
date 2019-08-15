@@ -6,7 +6,8 @@ class Home extends BaseController
 {
 	public function index()
 	{
-		return view('welcome_message');
+		$data['public_folder'] = FCPATH;
+		return view('welcome_message', $data);
 	}
 
 	//--------------------------------------------------------------------
