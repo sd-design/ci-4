@@ -12,7 +12,7 @@
 				height: 200px;
 				width: 155px;
 				display: inline-block;
-				opacity: 0.15;
+				opacity: 0.25;
 				position: absolute;
 				z-index: 0;
 				top: 2rem;
