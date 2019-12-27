@@ -5,7 +5,7 @@ use CodeIgniter\Model;
     class Funs extends Model
     {
     public function sayHello(){
-	$answer = "I say hello";
+	$answer = "I say hello second time";
 	return $answer;
 }
 
