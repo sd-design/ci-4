@@ -13,4 +13,8 @@ use CodeIgniter\Model;
 	return $say;
 }
 
+public function go_home(){
+	return redirect()->to('/');
+}
+
     }

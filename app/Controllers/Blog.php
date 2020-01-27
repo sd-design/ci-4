@@ -77,6 +77,19 @@ $data['list_orders'] =$records->getResultArray();
 return view('list_view', $data);
 	}
 
+public function array(){
+	//$array1 = array('home.jpg', 'home2223.jpg' , '555right.jpg');
+	$directory =$_SERVER['DOCUMENT_ROOT'].'/img/'; 
+$scanned_directory = array_diff(scandir($directory), array('..', '.'));
+$folder =  '/yum_foto/2019/Golos/';
+$event_name = 'Youth service Golos';
+array_walk($scanned_directory, function(&$value,  $key) use ($folder , $event_name) { $value = array('event_name' => $event_name , 'link' => $folder .$value); } );
+	//var_dump($array1);
+	return $this->response->setJSON($scanned_directory);
+}
+
+
+
 
 	//--------------------------------------------------------------------
 

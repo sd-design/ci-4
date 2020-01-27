@@ -44,6 +44,14 @@ $data['list_orders'] =$records->getResultArray();
 return $parser->setData($data)
              ->render('calls_template');
 	}
+	public function redirect($user){
+		return redirect()->to('/');
+		$funs = new Funs;
+		if($user === "alex"){
+$funs->go_home();
+		}
+
+	}
 
 
 	//--------------------------------------------------------------------
