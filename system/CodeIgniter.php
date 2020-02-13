@@ -415,7 +415,7 @@ class CodeIgniter
 			}
 			else
 			{
-				define('ENVIRONMENT', $_SERVER['CI_ENVIRONMENT'] ?? 'development'); //здесь собака зарыта
+				define('ENVIRONMENT', $_SERVER['CI_ENVIRONMENT'] ?? 'production'); //здесь собака зарыта
 			}
 		}
 	}
