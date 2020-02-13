@@ -32,9 +32,9 @@ class Database extends \CodeIgniter\Database\Config
 	public $default = [
 		'DSN'      => '',
 		'hostname' => 'localhost',
-		'username' => 'ci-4',
-		'password' => 'Hello&GoodCI4',
-		'database' => 'ci-4',
+		'username' => 'spektr54_landing',
+		'password' => 'KR56x00Petrov2019',
+		'database' => 'spektr54_landing',
 		'DBDriver' => 'MySQLi',
 		'DBPrefix' => '',
 		'pConnect' => false,
@@ -62,9 +62,9 @@ class Database extends \CodeIgniter\Database\Config
 		'hostname' => '127.0.0.1',
 		'username' => '',
 		'password' => '',
-		'database' => '',
-		'DBDriver' => '',
-		'DBPrefix' => 'db_',  // Needed to ensure we're working correctly with prefixes live. DO NOT REMOVE.
+		'database' => ':memory:',
+		'DBDriver' => 'SQLite3',
+		'DBPrefix' => 'db_',  // Needed to ensure we're working correctly with prefixes live. DO NOT REMOVE FOR CI DEVS
 		'pConnect' => false,
 		'DBDebug'  => (ENVIRONMENT !== 'production'),
 		'cacheOn'  => false,
